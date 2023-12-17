@@ -1,0 +1,19 @@
+{
+  "name": "tiktoken-bench",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tk.js",
+  "scripts": {
+    "start": "node tk.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dqbd/tiktoken": "^1.0.7",
+    "glob": "^10.3.10",
+    "js-tiktoken": "^1.0.8",
+    "tiktoken": "^1.0.11"
+  }
+}
