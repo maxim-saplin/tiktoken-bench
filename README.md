@@ -2,6 +2,32 @@ Comparing OpenAI tokeniser (tiktoken) performance - stock Python/Rust vs JS/WASM
 
 Running tests on M1 MacBook Pro
 
+# Results
+
+- Small File (68 tokens)
+```
+Python/Rust (tiktoken 0.5.2)     ████ (0.04ms)
+Pure JS (js-tiktoken 1.0.8)      █████ (0.05ms)
+JS/WASM (tiktoken 1.0.11)        ██████████ (0.11ms)
+@dqbd/WASM 1.0.7                 ██████████████████ (0.18ms)
+```
+
+- Medium File (1068 tokens)
+```
+Python/Rust (tiktoken 0.5.2)     ██████ (0.54ms)
+JS/WASM (tiktoken 1.0.11)        █████████ (0.78ms)
+@dqbd/WASM 1.0.7                 █████████ (0.80ms)
+Pure JS (js-tiktoken 1.0.8)      ██████████ (0.96ms)
+```
+
+- Large File (923942 tokens)
+```
+Python/Rust (tiktoken 0.5.2)     ████████████████ (359.49ms)
+@dqbd/WASM 1.0.7                 ████████████████████ (421.71ms)
+JS/WASM (tiktoken 1.0.11)        ██████████████████████ (451.92ms)
+Pure JS (js-tiktoken 1.0.8)      █████████████████████████████████████ (1005.69ms)
+```
+
 # Pyhton 3.11.6
 
 ## tiktoken 0.5.2
