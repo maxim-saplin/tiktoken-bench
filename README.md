@@ -1,3 +1,7 @@
+Comparing OpenAI tokeniser (tiktoken) performance - stock Python/Rust vs JS/WASM. 
+
+Running tests on M1 MacBook Pro
+
 # Pyhton 3.11.6
 
 ## tiktoken 0.5.2
