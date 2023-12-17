@@ -5,7 +5,7 @@ import 'package:path/path.dart' as path;
 
 Future<void> main() async {
   // List of .txt files to benchmark
-  final txtFiles = Directory.current
+  final txtFiles = Directory('../')
       .listSync()
       .where(
           (entity) => entity is File && path.extension(entity.path) == '.txt')
@@ -45,7 +45,7 @@ Future<List<dynamic>> benchmarkTokenization(
   // Run tokenization multiple times and measure execution time
   for (int i = 0; i < iterations; i++) {
     final startTime = DateTime.now().millisecondsSinceEpoch.toDouble();
-    final tokens = encoding.encode(content).length;
+    final tokens = encoding.encode(content);
     final endTime = DateTime.now().millisecondsSinceEpoch.toDouble();
     times.add(endTime - startTime);
   }
